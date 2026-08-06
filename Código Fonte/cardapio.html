@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - CapiPastel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-brand">
+                <div class="logo-icon">🦫</div>
+                <div class="brand-name">CapiPastel</div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html" class="active">Cardápio</a></li>
+                    <li><a href="pedido.html">Fazer Pedido <span class="cart-badge">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Nosso Cardápio</h2>
+        
+        <div class="categories-filter">
+            <button class="filter-btn active" onclick="filtrarCategoria('todos')">Todos</button>
+            <button class="filter-btn" onclick="filtrarCategoria('pasteis')">Pastéis</button>
+            <button class="filter-btn" onclick="filtrarCategoria('coxinhas')">Coxinhas</button>
+            <button class="filter-btn" onclick="filtrarCategoria('kibe')">Kibe</button>
+            <button class="filter-btn" onclick="filtrarCategoria('empadas')">Empadas</button>
+            <button class="filter-btn" onclick="filtrarCategoria('enroladinho')">Enroladinho</button>
+        </div>
+
+        <div class="menu-layout">
+            <div id="grid-produtos" class="grid-cards">
+                <!-- Produtos renderizados via JS -->
+            </div>
+
+            <aside class="cart-sidebar">
+                <h3>Seu Pedido</h3>
+                <div id="itens-carrinho" style="margin-top: 15px;">
+                    <!-- Itens do carrinho via JS -->
+                </div>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="total-valor">R$ 0,00</span>
+                </div>
+                <a href="pedido.html" class="btn btn-block">Ir para o Checkout</a>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 CapiPastel - Todos os direitos reservados.</p>
+            <p>Atendimento: Segunda a Sábado, das 09h às 22h</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
