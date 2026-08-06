@@ -1,4 +1,3 @@
-````markdown
 # CapiPastel — Documentação Técnica do Projeto
 
 O **CapiPastel** é um sistema web interativo para cardápio digital e pedidos online de uma pastelaria/lanchonete.
@@ -171,7 +170,7 @@ Em dispositivos móveis:
 
 ---
 
-## ⚙️ 3. Lógica JavaScript
+## 3. Lógica JavaScript
 
 Arquivo:
 
