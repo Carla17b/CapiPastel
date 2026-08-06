@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout e Pedido - CapiPastel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-brand">
+                <div class="logo-icon">🦫</div>
+                <div class="brand-name">CapiPastel</div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="pedido.html" class="active">Fazer Pedido <span class="cart-badge">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="checkout-area">
+            <h2 class="section-title">Finalizar Pedido</h2>
+            <form onsubmit="finalizarPedido(event)">
+                <div class="checkout-grid">
+                    <div>
+                        <h3>1. Dados de Entrega</h3>
+                        <br>
+                        <div class="form-group">
+                            <label for="cep">CEP (Busca Automática via API)</label>
+                            <input type="text" id="cep" class="form-control" placeholder="00000-000" onkeyup="buscarCEP()" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="logradouro">Rua / Logradouro</label>
+                            <input type="text" id="logradouro" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" id="bairro" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>2. Forma de Pagamento</h3>
+                        <br>
+                        <div class="form-group">
+                            <label for="nome">Seu Nome</label>
+                            <input type="text" id="nome" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pagamento">Pagamento</label>
+                            <select id="pagamento" class="form-control" required>
+                                <option value="pix">Pix (Aprovação Instantânea)</option>
+                                <option value="cartao">Cartão de Crédito / Débito</option>
+                                <option value="dinheiro">Dinheiro na Entrega</option>
+                            </select>
+                        </div>
+                        
+                        <div style="background: white; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                            <h4>Resumo do Carrinho</h4>
+                            <div id="itens-carrinho" style="margin: 10px 0;"></div>
+                            <div class="cart-total">
+                                <span>Total a Pagar:</span>
+                                <span id="total-valor">R$ 0,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-block">Confirmar e Enviar Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="status-area" style="display: none;">
+            <h2 class="section-title">Status do seu Pedido</h2>
+            <p style="text-align: center;">Acompanhe em tempo real o andamento do seu pedido conforme o fluxo de preparo.</p>
+            
+            <div class="status-tracker">
+                <div class="status-step active" id="step-pagamento">
+                    <div class="status-icon">1</div>
+                    <strong>Pagamento</strong>
+                    <p><small>Aprovação do caixa</small></p>
+                </div>
+                <div class="status-step" id="step-preparo">
+                    <div class="status-icon">2</div>
+                    <strong>Preparo</strong>
+                    <p><small>Fritando seus salgados</small></p>
+                </div>
+                <div class="status-step" id="step-entrega">
+                    <div class="status-icon">3</div>
+                    <strong>Saiu pra Entrega</strong>
+                    <p><small>A caminho do endereço</small></p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html" class="btn">Voltar para a Página Inicial</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 CapiPastel - Todos os direitos reservados.</p>
+            <p>Atendimento: Segunda a Sábado, das 09h às 22h</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
