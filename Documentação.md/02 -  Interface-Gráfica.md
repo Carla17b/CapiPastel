@@ -1,4 +1,4 @@
-# Fluxograma de Usuário
+# Fluxo de Usuário
 <img width="1684" height="2084" alt="Fluxograma CapiPastel" src="https://github.com/user-attachments/assets/68989be2-5f95-4228-9505-5b72f5e1dd9d" />
 
 ### Site utilizado: 
