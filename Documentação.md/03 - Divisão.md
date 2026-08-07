@@ -2,12 +2,12 @@
 
 ### Integrantes e funções:
 
-- Angelica Cristina Pereira de Assis - 
-- Carla Rodrigues Castelo -
-- Lais Fernanda Alves Cruz -
-- Mariane de Moraes e Souza -
-- Mateus Vitor Augusto dos Santos -
-- Icaro Dos Santos Costa - 
+- Angelica Cristina Pereira de Assis - Apresentação
+- Carla Rodrigues Castelo - Código e Publicou
+- Lais Fernanda Alves Cruz - Documentação
+- Mariane de Moraes e Souza - Documentação
+- Mateus Vitor Augusto dos Santos - Apresentação e Fluxograma
+- Icaro Dos Santos Costa - Fluxograma
 
 
 obs: Exemplos de funções como no formulario: (remover essa parte depois)
